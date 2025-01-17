@@ -15,5 +15,10 @@ body, header, .columnContainer, .gameContainer, .scoreBoard {
 }
 
 .matchesLabel {
-    margin-left: 5 rem;
+    margin-left: 5rem;
+}
+
+.tileItem {
+    margin: 1rem;
+    border-radius: 0.5rem;
 }
