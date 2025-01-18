@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <header>
-    <input type="button" value="New Game" />
+    <div id="buttonsContainer" class="buttonsContainer">
+        <input id="newGameButton" class="button" type="button" value="New Game" onclick="newGame()" />
+        <h2>Select Theme: </h2>
+        <input id="randomThemeButton" class="button themeButton selectedThemeButton" type="button" value="Random" onclick="newGame('random')" />
+        <input id="catsThemeButton" class="button themeButton" type="button" value="Cats" onclick="newGame('cats')" />
+        <input id="pokemonThemeButton" class="button themeButton" type="button" value="Pokemon" onclick="newGame('pokemon')" />
+    </div>
     <div id="scoreBoard" class="scoreBoard">
         <h1 id="movesLabel" class="movesLabel">Moves: 0</h1>
         <h1 id="matchesLabel" class="matchesLabel">Matches: 0</h1>
     </div>
 </header>
-<body>
+<body onload="newGame('random')">
     <div id="gameContainer" class="gameContainer"></div>
     <script src="./game_logic.js"></script>
 </body>
